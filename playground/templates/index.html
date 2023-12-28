@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Models</title>
+
+    <!-- Add your CSS styles or link to external stylesheets here -->
+
+    <style>
+        /* Add your custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            color: black;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 15px;
+        }
+
+        .linear-regression-result {
+            text-align: center;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .plot-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <!-- Add your JavaScript scripts or link to external scripts here -->
+
+</head>
+<body>
+
+<header>
+    <h1>Machine Learning Models</h1>
+</header>
+
+<nav>
+    <a href="#knn">KNN</a>
+    <a href="#svm">SVM</a>
+    <a href="#naive-bayes">Naive Bayes</a>
+    <a href="#decision-tree">Decision Tree</a>
+    <!-- Add more navigation links as needed -->
+</nav>
+
+<section>
+    <h2>KNN Model</h2>
+    <p>Add your content and animations for the KNN model here.</p>
+</section>
+
+<section>
+    <h2>SVM Model</h2>
+    <p>Add your content and animations for the SVM model here.</p>
+</section>
+
+<section>
+    <h2>Naive Bayes Model</h2>
+    <p>Add your content and animations for the Naive Bayes model here.</p>
+</section>
+
+<section>
+    <h2>Decision Tree Model</h2>
+    <p>Add your content and animations for the Decision Tree model here.</p>
+</section>
+
+<!-- Add more sections for other models -->
+
+<!-- Linear Regression Result Section -->
+<section class="linear-regression-result">
+    <h2>Linear Regression Result</h2>
+
+    <p>Coefficients: {{ coefficients }}</p>
+    <p>Intercept: {{ intercept }}</p>
+
+    <!-- Display the Matplotlib plot -->
+    <img class="plot-image" src="{{ plot_data_uri }}" alt="Linear Regression Plot">
+</section>
+
+<section class="knn-result">
+    <h2>KNN Model Result</h2>
+
+    <p>Accuracy: {{ knn_accuracy }}</p>
+
+    <!-- Display the confusion matrix -->
+    <img class="plot-image" src="data:image/png;base64,{{ knn_confusion_matrix }}" alt="Confusion Matrix">
+    <section class="logistic-regression-result">
+        <h2>Logistic Regression Result</h2>
+    
+        <p>Accuracy: {{ logistic_accuracy }}</p>
+    
+        <!-- Display the confusion matrix -->
+        <img class="plot-image" src="data:image/png;base64,{{ logistic_confusion_matrix }}" alt="Confusion Matrix">
+    
+        <!-- Add more content as needed for Logistic Regression results -->
+    
+    </section>
+</body>
+</html>
